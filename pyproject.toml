@@ -1,0 +1,27 @@
+[project]
+name = "fastapi-weather-backend"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "yuvra",email = "yuvraj.mane@yahoo.com"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi (>=0.115.14,<0.116.0)",
+    "uvicorn (>=0.35.0,<0.36.0)",
+    "firebase-admin (>=6.9.0,<7.0.0)",
+    "httpx (>=0.28.1,<0.29.0)",
+    "apscheduler (>=3.11.0,<4.0.0)"
+]
+
+[tool.poetry]
+packages = [{include = "fastapi_weather_backend", from = "src"}]
+
+
+[tool.poetry.group.dev.dependencies]
+python-dotenv = "^1.1.1"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
